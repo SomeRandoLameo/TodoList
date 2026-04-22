@@ -1,7 +1,19 @@
-from flask import Flask, request, jsonify, abort
+from flask import Flask, request, jsonify, abort, send_from_directory
+import os
 import uuid
 
 app = Flask(__name__)
+
+
+STATIC_DIR = os.path.dirname(os.path.abspath(__file__))
+
+@app.route("/")
+def index():
+    return send_from_directory(STATIC_DIR, "index.html")
+
+@app.route("/style.css")
+def styles():
+    return send_from_directory(STATIC_DIR, "style.css")
 
 todo_lists = {}
 todo_entries = {}
