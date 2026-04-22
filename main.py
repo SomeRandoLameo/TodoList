@@ -15,6 +15,14 @@ def index():
 def styles():
     return send_from_directory(STATIC_DIR, "style.css")
 
+@app.route("/app.js")
+def script():
+    return send_from_directory(STATIC_DIR, "app.js")
+
+@app.route("/components/<path:filename>")
+def components(filename):
+    return send_from_directory(os.path.join(STATIC_DIR, "components"), filename)
+
 todo_lists = {}
 todo_entries = {}
 
