@@ -1,3 +1,9 @@
 /.idea/*
 
 /.venv/*
+.DS_Store
+.idea/TodoList.iml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
