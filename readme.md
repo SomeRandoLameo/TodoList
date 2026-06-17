@@ -11,22 +11,22 @@ Sie richtet sich auch an Personen ohne Linux-Vorkenntnisse und funktioniert auf 
 
 ## 0. Voraussetzungen 
 ### Einloggen mit SSH
--	Verbinden sie sich zuerst über LAN oder WLAN mit dem selben Netz wie der Raspberry Pi.
+-	Verbinden Sie sich zuerst über LAN oder WLAN mit demselben Netz wie der Raspberry Pi.
 
 
 ```bash
 ssh nutzername@ip-adresse
 ```
 Bsp.: ssh mustermann@192.168.24.110
-- Nutzername und ip-adresse sind Platzhalter für den Nutzernamen bzw. die IP-Adresse des Raspberry
+- Nutzername und IP-Adresse sind Platzhalter für den Nutzernamen bzw. die IP-Adresse des Raspberry
 -	Eingeben des Nutzerpassworts (Beim Eintippen erscheinen keine Zeichen)
--	Beim erstmaligen Verbindungsaufbau fragt das System nach einem Fingerprint. Sie werden gefragt ob sie die Verbindung fortsetzen möchten. (yes/no/[fingerprint])
+-	Beim erstmaligen Verbindungsaufbau fragt das System nach einem Fingerprint. Sie werden gefragt ob Sie die Verbindung fortsetzen möchten. (yes/no/[fingerprint])
 
 ```bash
 yes
 ```
 - No und fingerprint sind in diesem Fall zu vernachlässigen
-- Passwort eingeben (Wurde beim ersten aufsetzen des Pis erstellt)
+- Passwort eingeben (Wurde beim ersten Aufsetzen des Pis erstellt)
 
 ### Datum konfigurieren
 ```bash
@@ -126,7 +126,7 @@ sudo nmcli connection up netplan-eth0
 > **Achtung (SSH):** Wird dieser Schritt per SSH ausgeführt, bricht die Verbindung beim `down`-Befehl ab.  
 > Danach muss man sich mit der **neuen statischen IP** (`192.168.24.110`) erneut einloggen.
 >
-> Bei erneutem login wird dieser Fehler erscheinen:
+> Bei erneutem Login wird dieser Fehler erscheinen:
 > 
 ```bash
 C:\Users\xxx>ssh username@ipadresse
@@ -182,7 +182,7 @@ sudo useradd -m -s /bin/bash willi
 > `-s /bin/bash` setzt die Standard-Shell auf Bash.  
 > `sudo` führt den Befehl mit Administratorrechten aus.
 
-Neues Passowrt für Willi anlegen:
+Neues Passwort für Willi anlegen:
 ```bash
 sudo passwd willi
 # Passwort eingeben: willispasswd
@@ -260,7 +260,7 @@ Docker Compose ermöglicht es, mehrere Container gleichzeitig über eine Konfigu
 sudo apt-get install -y docker-compose
 ```
 ![outdated libs](assets/outdated_libs.png)
->Sollte dieses Fenster erscheinen, navigieren sie mit Tab zu ok und bestätigen sie mit Enter.
+>Sollte dieses Fenster erscheinen, navigieren Sie mit Tab zu OK und bestätigen Sie mit Enter.
 ### Aktuellen Benutzer zur Docker-Gruppe hinzufügen (optional)
 
 ```bash
@@ -270,7 +270,7 @@ sudo usermod -aG docker $USER
 > Damit kann Docker ohne `sudo` verwendet werden.  
 > **Hinweis:** Diese Änderung wird erst nach einem Neu-Login wirksam.
 >
-> Mit "Exit" ausloggen und über ssh erneut verbinden.
+> Mit "Exit" ausloggen und über SSH erneut verbinden.
 
 ---
 
