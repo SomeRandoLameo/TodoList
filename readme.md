@@ -259,8 +259,8 @@ Docker Compose ermöglicht es, mehrere Container gleichzeitig über eine Konfigu
 ```bash
 sudo apt-get install -y docker-compose
 ```
-![alt text](image.png)
->Sollte dieses Fenster erscheinen gehen sie mit Tab zu ok und bestätigen sie mit Enter.
+![outdated libs](assets/outdated_libs.png)
+>Sollte dieses Fenster erscheinen, navigieren sie mit Tab zu ok und bestätigen sie mit Enter.
 ### Aktuellen Benutzer zur Docker-Gruppe hinzufügen (optional)
 
 ```bash
